@@ -22,7 +22,7 @@ const config: Config = {
     nextui({
       themes: {
         dark: {
-          olors: {
+          colors: {
             // background: "#202023",
           },
         },
