@@ -1,7 +1,7 @@
-import { faHatWizard } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import styled from "@emotion/styled";
+import hatWhite from "@/app/assets/hat-white.png";
+import Image from "next/image";
 
 const LogoBox = styled.span`
   display: inline-flex;
@@ -9,24 +9,13 @@ const LogoBox = styled.span`
   height: 30px;
   line-height: 20px;
   padding: 10px;
-
-  > svg {
-    transition: 200ms ease;
-  }
-
-  &:hover > svg {
-    transform: rotate(20deg);
-  }
 `;
 
 const Logo = () => {
   return (
     <Link href="/" scroll={false}>
       <LogoBox>
-        <FontAwesomeIcon
-          icon={faHatWizard}
-          className="dark:text-orange-400 text-purple-800"
-        />
+        <Image width={30} alt="Wizard Hat" src={hatWhite} />
         <p className="font-bold dark:text-white text-gray-800 ml-1">brendalf</p>
       </LogoBox>
     </Link>
