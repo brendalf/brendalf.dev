@@ -22,7 +22,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Nav></Nav>
-          {children}
+          <main className="container mx-auto max-w-7xl pt-6 px-6 flex-grow">
+            {children}
+          </main>
+          <footer className="text-gray-400 font-thin text-center text-sm mt-8">
+            © 2023 Breno Silva. All Rights Reserved.
+          </footer>
         </Providers>
       </body>
     </html>
