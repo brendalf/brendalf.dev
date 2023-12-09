@@ -6,5 +6,6 @@ interface NavItem {
 interface SiteConfig {
   title: string;
   description: string;
+  github: string;
   navItems: NavItem[];
 }

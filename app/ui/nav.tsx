@@ -9,11 +9,13 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
+  Tooltip,
 } from "@nextui-org/react";
 import { useState } from "react";
 import { siteConfig } from "../config/site";
-import { ThemeSwitch } from "./theme_switch";
 import Logo from "./logo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +45,11 @@ export default function Nav() {
       {/* Toggle menu and theme switcher */}
       <NavbarContent justify="end">
         <NavbarItem>
-          <ThemeSwitch />
+          <Link href={siteConfig.github} color="foreground">
+            <Tooltip content="View Source">
+              <FontAwesomeIcon icon={faGithub} />
+            </Tooltip>
+          </Link>
         </NavbarItem>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
