@@ -45,7 +45,7 @@ export default function Nav() {
       {/* Toggle menu and theme switcher */}
       <NavbarContent justify="end">
         <NavbarItem>
-          <Link href={siteConfig.github} color="foreground">
+          <Link href={siteConfig.github} target="_blank" color="foreground">
             <Tooltip content="View Source">
               <FontAwesomeIcon icon={faGithub} />
             </Tooltip>
