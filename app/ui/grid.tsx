@@ -12,9 +12,8 @@ export const Grid = (props: GridProps) => (
   <div className="text-center m-2">
     <Link className="flex flex-col" href={props.href} color="foreground">
       <Image
+        className="object-cover w-[275px] h-[155px]"
         isZoomed
-        width={275}
-        style={{ height: 155 }}
         alt={props.title}
         loading="lazy"
         src={props.thumbnail}
