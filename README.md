@@ -2,7 +2,7 @@
 
 > This is a working in progress...
 
-[https://brendalf-dev/](https://brendalf-dev/)
+[https://brendalf.dev/](https://brendalf.dev/)
 
 Just a place to host my blog, share recipes and other things I love.
 
