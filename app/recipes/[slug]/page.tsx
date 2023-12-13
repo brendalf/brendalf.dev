@@ -1,10 +1,16 @@
-"use client";
-
 import recipes from "@/app/recipes/data";
 import { Image, Spacer } from "@nextui-org/react";
 
-export default function ViewRecipe({ params }: { params: { slug: string } }) {
-  const recipe = recipes[params.slug];
+export default async function ViewRecipe({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const recipe = await load_recipe(params.slug);
+
+  if (!recipe) {
+    return <div>Recipe not found</div>;
+  }
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -23,4 +29,8 @@ export default function ViewRecipe({ params }: { params: { slug: string } }) {
       </div>
     </div>
   );
+}
+
+async function load_recipe(slug: string) {
+  return recipes[slug];
 }
