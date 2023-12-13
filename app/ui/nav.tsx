@@ -12,13 +12,15 @@ import {
   Tooltip,
 } from "@nextui-org/react";
 import { useState } from "react";
-import { siteConfig } from "../config/site";
-import Logo from "./logo";
+import { siteConfig } from "@/app/config/site";
+import Logo from "@/app/ui/logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { usePathname } from "next/navigation";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -33,7 +35,7 @@ export default function Nav() {
             <Link
               href={item.link}
               color="foreground"
-              underline="hover"
+              underline={`${pathname === item.link ? "always" : "hover"}`}
               className="font-light"
             >
               {item.title}
@@ -61,7 +63,11 @@ export default function Nav() {
       <NavbarMenu>
         {siteConfig.navItems.map((item, index) => (
           <NavbarMenuItem key={`${item.title}-${index}`}>
-            <Link className="w-full" href={item.link}>
+            <Link
+              className="w-full"
+              href={item.link}
+              color={`${pathname === item.link ? "secondary" : "foreground"}`}
+            >
               {item.title}
             </Link>
           </NavbarMenuItem>
