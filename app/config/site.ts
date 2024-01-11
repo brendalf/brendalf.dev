@@ -15,5 +15,9 @@ export const siteConfig: SiteConfig = {
       title: "Recipes",
       link: "/recipes",
     },
+    {
+      title: "About",
+      link: "/about",
+    },
   ],
 };
