@@ -56,20 +56,23 @@ export default function Home() {
       <div>
         <p className="font-bold text-lg">Bio</p>
         <Divider className="my-2" />
-        <History year="1995" desc="Born in Alegre, ES. Brazil." />
+        <History year="1995" desc="Born in Alegre, ES, Brazil." />
         <History year="2006" desc="Wrote my first C++ program." />
         <History
           year="2012"
-          desc="Started a Bachelor's in Computer Science at UFES (Completed in 2021)."
-        />
-        <History year="2014" desc="Become a Police Officer (Left on 2019)." />
-        <History
-          year="2015"
-          desc="Launched InfrAÇÕES, reaching 100k users in a couple of months."
+          desc="Began my Bachelor's degree in Computer Science at UFES, completed in 2021."
         />
         <History
+          year="2014"
+          desc="Became a Police Officer (served until 2019)."
+        />
+        <History
           year="2015"
-          desc="Started my own consultant company (NerdES) with focus on early-stage startups."
+          desc="Launched the 'InfrAÇÕES' app, achieving 100,000 users within a few months."
+        />
+        <History
+          year=""
+          desc="Founded my consulting firm, NerdES, specializing in early-stage startups."
         />
         <History year="2019" desc="Worked as a Software Engineer at IBM." />
         <History
@@ -82,7 +85,7 @@ export default function Home() {
         />
         <History
           year="2022"
-          desc="Moved to the Netherlands and started working as a Software Engineer at Bol.com"
+          desc="Relocated to the Netherlands and began working as a Software Engineer at Bol.com."
         />
       </div>
 
