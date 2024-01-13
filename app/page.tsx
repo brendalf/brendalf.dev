@@ -11,7 +11,7 @@ import { siteConfig } from "./config/site";
 
 export default function Home() {
   return (
-    <div className="max-w-lg mx-auto">
+    <div className="max-w-xl mx-auto">
       {/* Profile */}
       <div className="flex flex-row pb-6">
         <Avatar
@@ -32,7 +32,7 @@ export default function Home() {
       <div>
         <p className="font-bold text-lg">Work</p>
         <Divider className="my-2" />
-        <p className="text-gray-300 font-light text-sm">
+        <p className="font-light leading-6 text-sm text-justify">
           {siteConfig.home.work}
         </p>
         <Spacer y={4} />

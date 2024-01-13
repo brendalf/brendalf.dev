@@ -40,7 +40,7 @@ export const siteConfig: SiteConfig = {
         id: 5,
         year: "2015",
         description:
-          "Launched the 'InfrAÇÕES' app, achieving 100,000 users within a few months.",
+          "Launched the 'InfrAÇÕES' app, achieving 100k users within a few months.",
       },
       {
         id: 6,
@@ -67,8 +67,12 @@ export const siteConfig: SiteConfig = {
       {
         id: 10,
         year: "2023",
-        description:
-          "Relocated to the Netherlands and began working as a Software Engineer at Bol.com.",
+        description: "Relocated to the Netherlands.",
+      },
+      {
+        id: 10,
+        year: "",
+        description: "Began working as a Software Engineer at Bol.com.",
       },
     ],
     love: "Family, Coding, Sci-Fi, Music, Drawing, Games, Politcs, and Machine Learning.",
