@@ -7,6 +7,7 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { siteConfig } from "./config/site";
 
 export default function Home() {
   return (
@@ -32,13 +33,7 @@ export default function Home() {
         <p className="font-bold text-lg">Work</p>
         <Divider className="my-2" />
         <p className="text-gray-300 font-light text-sm">
-          Hello! I'm Breno, a Software Engineer specializing in Web Development
-          and Machine Learning. Currently residing in Utrecht, the Netherlands,
-          my roots are in Alegre, Brazil. I'm proud to have launched
-          'InfrAÇÕES', a mobile app that garnered over 100k users. My diverse
-          experiences also include serving as a police officer for five years. A
-          lifelong learner, my journey in coding began at the age of 11 and
-          continues passionately to this day.
+          {siteConfig.home.work}
         </p>
         <Spacer y={4} />
         <div className="flex justify-center">
@@ -56,37 +51,13 @@ export default function Home() {
       <div>
         <p className="font-bold text-lg">Bio</p>
         <Divider className="my-2" />
-        <History year="1995" desc="Born in Alegre, ES, Brazil." />
-        <History year="2006" desc="Wrote my first C++ program." />
-        <History
-          year="2012"
-          desc="Began my Bachelor's degree in Computer Science at UFES, completed in 2021."
-        />
-        <History
-          year="2014"
-          desc="Became a Police Officer (served until 2019)."
-        />
-        <History
-          year="2015"
-          desc="Launched the 'InfrAÇÕES' app, achieving 100,000 users within a few months."
-        />
-        <History
-          year=""
-          desc="Founded my consulting firm, NerdES, specializing in early-stage startups."
-        />
-        <History year="2019" desc="Worked as a Software Engineer at IBM." />
-        <History
-          year="2020"
-          desc="Worked as a Data Scientist at Itaú Unibanco."
-        />
-        <History
-          year="2021"
-          desc="Worked as a Machine Learning Engineer at Wildlife Studios."
-        />
-        <History
-          year="2022"
-          desc="Relocated to the Netherlands and began working as a Software Engineer at Bol.com."
-        />
+        {siteConfig.home.bio.map((bioItem) => (
+          <History
+            key={bioItem.id}
+            year={bioItem.year}
+            desc={bioItem.description}
+          />
+        ))}
       </div>
 
       <Spacer y={6} />
@@ -96,8 +67,7 @@ export default function Home() {
         <p className="font-bold text-lg">I love</p>
         <Divider className="my-2" />
         <p className="text-gray-300 font-light text-sm">
-          Family, Coding, Sci-Fi, Music, Drawing, Games, Politcs, and Machine
-          Learning.
+          {siteConfig.home.love}
         </p>
       </div>
 
