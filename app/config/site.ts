@@ -21,7 +21,7 @@ export const siteConfig: SiteConfig = {
     },
   ],
   home: {
-    work: "Hello! I'm Breno, a Software Engineer specializing in Web Development and Machine Learning. Currently residing in Utrecht, the Netherlands, my roots are in Alegre, Brazil. I'm proud to have launched 'InfrAÇÕES', a mobile app that garnered over 100k users. My diverse experiences also include serving as a police officer for five years. A lifelong learner, my journey in coding began at the age of 11 and continues passionately to this day. ",
+    work: "Hello! I'm Breno, a Software Engineer specialized in Web Development and Machine Learning. Currently residing in Utrecht, the Netherlands, my roots are in Alegre, Brazil. I'm proud to have launched 'InfrAÇÕES', a mobile app that garnered over 100k users. My diverse experiences also include serving as a police officer for five years. A lifelong learner, my journey in coding began at the age of 11 and continues passionately to this day. ",
     bio: [
       { id: 1, year: "1995", description: "Born in Alegre, ES, Brazil." },
       { id: 2, year: "2006", description: "Wrote my first C++ program." },
@@ -75,6 +75,6 @@ export const siteConfig: SiteConfig = {
         description: "Began working as a Software Engineer at Bol.com.",
       },
     ],
-    love: "Family, Coding, Sci-Fi, Music, Drawing, Games, Politcs, and Machine Learning.",
+    love: "Family, Coding, Sci-Fi, Music, Drawing, Games, Politics, and Machine Learning.",
   },
 };
