@@ -4,5 +4,9 @@ import { NextUIProvider } from "@nextui-org/react";
 import { ReactNode } from "react";
 
 export function Providers({ children }: { children: ReactNode }) {
-  return <NextUIProvider>{children}</NextUIProvider>;
+  return (
+    <NextUIProvider>
+      <div className="dark text-foreground bg-background">{children}</div>
+    </NextUIProvider>
+  );
 }
