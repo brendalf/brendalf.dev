@@ -9,7 +9,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       title: "Posts",
-      link: "/blog",
+      link: "/posts",
     },
     {
       title: "Recipes",
