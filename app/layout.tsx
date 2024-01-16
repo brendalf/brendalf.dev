@@ -25,7 +25,7 @@ export default function RootLayout({
           <main className="container mx-auto max-w-7xl min-h-[80svh] pt-6 px-6 flex-grow">
             {children}
           </main>
-          <footer className="text-gray-400 font-light text-center sm:font-thin text-sm mt-8">
+          <footer className="text-gray-400 font-light text-center sm:font-thin text-sm my-8">
             © 2023 Breno Silva. All Rights Reserved.
           </footer>
         </Providers>

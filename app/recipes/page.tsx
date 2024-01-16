@@ -19,7 +19,7 @@ export default function Recipes() {
           const recipe = recipes[id];
           return (
             <Grid
-              key={`recipe-${idx}`}
+              key={`rec-${idx}`}
               title={recipe.title}
               href={`/recipes/${id}`}
               thumbnail={recipe.thumbnail}

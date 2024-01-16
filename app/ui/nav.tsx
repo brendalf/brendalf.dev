@@ -31,7 +31,7 @@ export default function Nav() {
       {/* Default menu */}
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {siteConfig.navItems.map((item, idx) => (
-          <NavbarItem key={`nav1-${idx}`}>
+          <NavbarItem key={`nav-${idx}`}>
             <Link
               href={item.link}
               color="foreground"
@@ -62,7 +62,7 @@ export default function Nav() {
       {/* Toggle menu options */}
       <NavbarMenu>
         {siteConfig.navItems.map((item, idx) => (
-          <NavbarMenuItem key={`nav2-${idx}`}>
+          <NavbarMenuItem key={`nav-tgl-${idx}`}>
             <Link
               className="w-full"
               href={item.link}
