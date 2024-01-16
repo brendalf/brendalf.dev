@@ -43,7 +43,7 @@ export default async function ViewRecipe({
         </div>
         <Divider className="my-2" />
         {recipe.process.map((value, idx) => (
-          <div key={idx} className="text-gray-300 font-light mb-4">
+          <div key={idx} className="text-gray-300 font-light mb-4 text-justify">
             {value}
           </div>
         ))}
