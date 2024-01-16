@@ -18,20 +18,22 @@ export default async function ViewRecipe({
     <div className="flex flex-col justify-center">
       <h2 className="text-2xl text-center font-thin">{recipe.title}</h2>
       <Spacer y={4} />
-      <Image
-        className="object-cover h-[350px] w-screen"
-        alt={recipe.title}
-        loading="lazy"
-        src={recipe.thumbnail}
-      />
+      <div className="mx-auto max-w-7xl">
+        <Image
+          className="object-cover h-[350px] w-screen"
+          alt={recipe.title}
+          loading="lazy"
+          src={recipe.thumbnail}
+        />
+      </div>
       <Spacer y={4} />
-      <div className="w-2/5 container mx-auto">
+      <div className="w-full sm:w-3/6 container mx-auto">
         <div className="text-lg text-secondary">
           <FontAwesomeIcon icon={faPlateWheat} />
           <span className="ml-4">Ingredients</span>
         </div>
         <Divider className="my-2" />
-        <div className="text-gray-300 font-light">
+        <div className="font-light sm:font-thin">
           {recipe.ingredients.map((value, idx) => (
             <div key={idx}>{value}</div>
           ))}
@@ -43,9 +45,12 @@ export default async function ViewRecipe({
         </div>
         <Divider className="my-2" />
         {recipe.process.map((value, idx) => (
-          <div key={idx} className="text-gray-300 font-light mb-4 text-justify">
-            {value}
-          </div>
+          <>
+            <div key={idx} className="font-light sm:font-thin text-justify">
+              {value}
+            </div>
+            <Spacer y={4} />
+          </>
         ))}
       </div>
     </div>
