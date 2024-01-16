@@ -4,7 +4,6 @@ interface NavItem {
 }
 
 interface BioItem {
-  id: number;
   year: string;
   description: string;
 }

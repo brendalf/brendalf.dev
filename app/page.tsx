@@ -51,12 +51,8 @@ export default function Home() {
       <div>
         <p className="font-bold text-lg">Bio</p>
         <Divider className="my-2" />
-        {siteConfig.home.bio.map((bioItem) => (
-          <History
-            key={bioItem.id}
-            year={bioItem.year}
-            desc={bioItem.description}
-          />
+        {siteConfig.home.bio.map((bioItem, idx) => (
+          <History key={idx} year={bioItem.year} desc={bioItem.description} />
         ))}
       </div>
 
