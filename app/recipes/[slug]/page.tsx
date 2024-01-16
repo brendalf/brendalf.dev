@@ -35,7 +35,7 @@ export default async function ViewRecipe({
         <Divider className="my-2" />
         <div className="font-light sm:font-thin">
           {recipe.ingredients.map((value, idx) => (
-            <div key={idx}>{value}</div>
+            <div key={`ing-${idx}`}>{value}</div>
           ))}
         </div>
         <Spacer y={8} />
@@ -46,7 +46,10 @@ export default async function ViewRecipe({
         <Divider className="my-2" />
         {recipe.process.map((value, idx) => (
           <>
-            <div key={idx} className="font-light sm:font-thin text-justify">
+            <div
+              key={`d-${idx}`}
+              className="font-light sm:font-thin text-justify"
+            >
               {value}
             </div>
             <Spacer y={4} />

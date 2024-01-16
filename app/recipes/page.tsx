@@ -15,13 +15,13 @@ export default function Recipes() {
     <div>
       <SectionTitle title="Recipes" icon={faUtensils} />
       <div className="flex flex-wrap justify-center">
-        {Object.keys(recipes).map((recipe_id) => {
-          const recipe = recipes[recipe_id];
+        {Object.keys(recipes).map((id, idx) => {
+          const recipe = recipes[id];
           return (
             <Grid
-              key={recipe_id}
+              key={`recipe-${idx}`}
               title={recipe.title}
-              href={`/recipes/${recipe_id}`}
+              href={`/recipes/${id}`}
               thumbnail={recipe.thumbnail}
             />
           );
