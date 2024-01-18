@@ -7,8 +7,8 @@ interface SectionTitleProps {
 }
 
 export const SectionTitle = (props: SectionTitleProps) => (
-  <h2 className="px-4 mb-2 text-xl text-center font-light">
+  <p className="text-lg font-light">
     {props.icon ? <FontAwesomeIcon icon={props.icon} className="mr-2" /> : null}
     {props.title}
-  </h2>
+  </p>
 );

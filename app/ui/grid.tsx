@@ -9,10 +9,10 @@ interface GridProps {
 }
 
 export const Grid = (props: GridProps) => (
-  <div className="text-center m-2">
+  <div className="text-center pb-4 w-full sm:w-64">
     <Link className="flex flex-col" href={props.href} color="foreground">
       <Image
-        className="object-cover w-[275px] h-[155px]"
+        className="object-cover"
         isZoomed
         alt={props.title}
         loading="lazy"

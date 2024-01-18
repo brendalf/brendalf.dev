@@ -6,6 +6,10 @@ import { siteConfig } from "@/app/config/site";
 import Nav from "@/app/ui/nav";
 import dynamic from "next/dynamic";
 import { Spinner } from "@nextui-org/react";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
 
 const VoxelScene = dynamic(() => import("@/app/ui/voxcel/scene"), {
   ssr: false,
@@ -33,7 +37,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Nav></Nav>
-          <main className="container mx-auto max-w-7xl min-h-[80svh] pt-6 px-6 flex-grow">
+          <main className="mx-auto max-w-xl min-h-[85svh] pt-4 px-6 flex-grow">
             <VoxelScene></VoxelScene>
             {children}
           </main>

@@ -11,7 +11,7 @@ import { siteConfig } from "./config/site";
 
 export default function Home() {
   return (
-    <div className="max-w-xl mx-auto">
+    <div>
       {/* Profile */}
       <div className="flex flex-row pb-6">
         <Avatar
