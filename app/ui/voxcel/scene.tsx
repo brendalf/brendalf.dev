@@ -1,46 +1,56 @@
 "use client";
 
+import React from "react";
+import { Canvas, useLoader } from "@react-three/fiber";
+import { Stats, OrbitControls } from "@react-three/drei";
+import { OBJLoader } from "three/examples/jsm/Addons.js";
 import * as THREE from "three";
-import React, { useRef, useState } from "react";
-import { Canvas, useFrame, ThreeElements, useLoader } from "@react-three/fiber";
-// import { GLTFLoader } from "three/examples/jsm/Addons.js";
-
-function Box(props: ThreeElements["mesh"]) {
-  const meshRef = useRef<THREE.Mesh>(null!);
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
-  useFrame((_, delta) => (meshRef.current.rotation.x += delta));
-  return (
-    <mesh
-      {...props}
-      ref={meshRef}
-      scale={active ? 1.5 : 1}
-      onClick={(_) => setActive(!active)}
-      onPointerOver={(_) => setHover(true)}
-      onPointerOut={(_) => setHover(false)}
-    >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
-    </mesh>
-  );
-}
 
 export default function VoxcelScene() {
-  // const gltf = useLoader(GLTFLoader, "/dog.glb");
+  const table = useLoader(OBJLoader, "/table.obj");
+  const wizard = useLoader(OBJLoader, "/wizard.obj");
+
+  const target = new THREE.Vector3(0, 1.2, 0);
+  const initialCameraPosition = new THREE.Vector3(
+    20 * Math.sin(0.2 * Math.PI),
+    40,
+    20 * Math.cos(0.2 * Math.PI),
+  );
+
+  const scale = 500 * 0.005 + 4.8;
+  const camera = new THREE.OrthographicCamera(
+    -scale,
+    scale,
+    scale,
+    -scale,
+    0.01,
+    50000,
+  );
+  camera.position.copy(initialCameraPosition);
+  camera.lookAt(target);
+
   return (
-    <Canvas>
-      <ambientLight intensity={Math.PI / 2} />
-      <spotLight
-        position={[10, 10, 10]}
-        angle={0.15}
-        penumbra={1}
-        decay={0}
-        intensity={Math.PI}
-      />
-      <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
-      {/* <primitive object={gltf.scene} /> */}
-      <Box position={[-1.2, 0, 0]} />
-      <Box position={[1.2, 0, 0]} />
-    </Canvas>
+    <div className="h-[280px]">
+      <Canvas camera={camera}>
+        <ambientLight intensity={Math.PI} />
+        <spotLight
+          position={[10, 10, 10]}
+          angle={0.15}
+          penumbra={1}
+          decay={0}
+          intensity={Math.PI}
+        />
+        <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
+        <primitive position={[0, -40, 0]} object={table} />
+        <primitive
+          position={[45, -40, 35]}
+          scale={1.8}
+          rotation={[0, Math.PI * 1.5, 0]}
+          object={wizard}
+        />
+        <OrbitControls camera={camera} target={target} />
+        <Stats />
+      </Canvas>
+    </div>
   );
 }
