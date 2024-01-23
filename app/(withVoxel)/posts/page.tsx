@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { siteConfig } from "@/app/config/site";
-import { SectionTitle } from "../ui/section_title";
+import { SectionTitle } from "@/app/ui/section_title";
 import { Spacer } from "@nextui-org/react";
 
 export const metadata: Metadata = {

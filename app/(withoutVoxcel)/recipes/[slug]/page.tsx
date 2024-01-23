@@ -1,4 +1,4 @@
-import recipes from "@/app/recipes/data";
+import recipes from "@/app/data/recipes";
 import { faBlender, faPlateWheat } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Divider, Image, Spacer } from "@nextui-org/react";
@@ -27,7 +27,7 @@ export default async function ViewRecipe({
         />
       </div>
       <Spacer y={4} />
-      <div className="w-full sm:w-3/6 container mx-auto">
+      <div>
         <div className="text-lg text-secondary">
           <FontAwesomeIcon icon={faPlateWheat} />
           <span className="ml-4">Ingredients</span>

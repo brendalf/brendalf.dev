@@ -1,13 +1,13 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Avatar, Button, Divider, Link, Spacer } from "@nextui-org/react";
-import { History } from "./ui/history";
+import { History } from "@/app/ui/history";
 import {
   faGithub,
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { siteConfig } from "./config/site";
+import { siteConfig } from "@/app/config/site";
 
 export default function Home() {
   return (

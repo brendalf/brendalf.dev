@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Grid } from "@/app/ui/grid";
 import { siteConfig } from "@/app/config/site";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
-import recipes from "./data";
-import { SectionTitle } from "../ui/section_title";
+import recipes from "@/app/data/recipes";
+import { SectionTitle } from "@/app/ui/section_title";
 import { Spacer } from "@nextui-org/react";
 
 export const metadata: Metadata = {
