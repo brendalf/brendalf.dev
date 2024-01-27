@@ -7,10 +7,7 @@ import { OBJLoader } from "three/examples/jsm/Addons.js";
 import * as THREE from "three";
 
 export default function VoxcelScene() {
-  const table = useLoader(OBJLoader, "/table.obj");
-  table.applyMatrix4(new THREE.Matrix4().makeScale(-1, 1, 1));
-
-  const wizard = useLoader(OBJLoader, "/wizard.obj");
+  const [table, wizard] = useLoader(OBJLoader, ["/table.obj", "/wizard.obj"]);
 
   const target = new THREE.Vector3(30, -20, 20);
   const initialCameraPosition = new THREE.Vector3(100, 5, 80);
@@ -32,7 +29,12 @@ export default function VoxcelScene() {
         />
         <pointLight position={[0, 20, 10]} decay={0} intensity={Math.PI} />
         <mesh>
-          <primitive position={[65, -40, 0]} object={table} />
+          <primitive
+            matrix4={new THREE.Matrix4()}
+            scale={new THREE.Vector3(-1, 1, 1)}
+            position={[65, -40, 0]}
+            object={table}
+          />
         </mesh>
         <mesh>
           <primitive
