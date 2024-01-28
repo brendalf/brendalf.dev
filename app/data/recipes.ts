@@ -1,10 +1,3 @@
-interface Recipe {
-  title: string;
-  thumbnail: string;
-  ingredients: string[];
-  process: string[];
-}
-
 const recipes: Record<string, Recipe> = {
   "chocolate-cookies": {
     title: "Chocolate Cookies",

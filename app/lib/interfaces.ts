@@ -21,3 +21,16 @@ interface SiteConfig {
   navItems: NavItem[];
   home: HomeConfig;
 }
+
+interface Recipe {
+  title: string;
+  thumbnail: string;
+  ingredients: string[];
+  process: string[];
+}
+
+interface Post {
+  title: string;
+  thumbnail: string;
+  contents: string;
+}

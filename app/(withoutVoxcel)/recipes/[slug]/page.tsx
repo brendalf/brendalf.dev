@@ -8,7 +8,7 @@ export default async function ViewRecipe({
 }: {
   params: { slug: string };
 }) {
-  const recipe = await load_recipe(params.slug);
+  const recipe = load_recipe(params.slug);
 
   if (!recipe) {
     return <div>Recipe not found</div>;
@@ -60,6 +60,6 @@ export default async function ViewRecipe({
   );
 }
 
-async function load_recipe(slug: string) {
+function load_recipe(slug: string): Recipe {
   return recipes[slug];
 }
