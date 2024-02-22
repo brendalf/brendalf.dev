@@ -1,4 +1,4 @@
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Avatar, Button, Divider, Link, Spacer } from "@nextui-org/react";
 import { History } from "@/app/ui/history";
@@ -37,11 +37,17 @@ export default function Home() {
         </p>
         <Spacer y={4} />
         <div className="flex justify-center">
-          <Link href="/works">
-            <Button color="secondary">
-              Portifolio <FontAwesomeIcon icon={faChevronRight} />
+          <Link href="/cv-breno-silva.pdf" isExternal>
+            <Button variant="ghost" color="secondary">
+              Download CV <FontAwesomeIcon icon={faDownload} />
             </Button>
           </Link>
+          <Spacer />
+          {/* <Link href="/works"> */}
+          {/*   <Button color="secondary"> */}
+          {/*     Portifolio <FontAwesomeIcon icon={faChevronRight} /> */}
+          {/*   </Button> */}
+          {/* </Link> */}
         </div>
       </div>
 
