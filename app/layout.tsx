@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Nav></Nav>
-          <main className="mx-auto max-w-xl min-h-[85svh] pt-4 px-6 flex-grow">
+          <main className="mx-auto max-w-2xl min-h-[85svh] pt-4 px-6 flex-grow">
             {children}
           </main>
           <footer className="text-gray-400 font-light text-center sm:font-thin text-sm my-8">
