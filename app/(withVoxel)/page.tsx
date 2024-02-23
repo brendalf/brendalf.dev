@@ -18,7 +18,7 @@ export default function Home() {
           isBordered
           className="w-24 h-24 text-large"
           alt="Profile Picture"
-          src="/brendalf.png"
+          src="/brendalf.jpg"
         />
         <div className="ml-6 mt-2">
           <h1 className="text-4xl font-bold">Breno Silva</h1>
@@ -30,10 +30,26 @@ export default function Home() {
 
       {/* Work */}
       <div>
-        <p className="font-bold text-lg">Work</p>
+        <p className="font-bold text-lg">About me</p>
         <Divider className="my-2" />
         <p className="font-light leading-6 text-sm text-justify">
-          {siteConfig.home.work}
+          Hello! I&apos;m Breno, a Software Engineer seasoned in Web
+          Development, DevOps, Python, and Machine Learning Engineering.
+          Constantly trying to improve my developer skills by learning how
+          things work in the background. I use Neovim with TMUX and I like typed
+          languages like Golang and Rust.
+        </p>
+        <p className="font-light leading-6 mt-2 text-sm text-justify">
+          Currently residing in the Netherlands, my roots are in Brazil. My
+          diverse experiences also include serving as a police officer for five
+          years, where I launched &quot;InfrAÇÕES&quot;, a mobile application
+          with over 100k active users that aims to make traffic law accessible
+          to everyone.
+        </p>
+        <p className="font-light leading-6 mt-2 text-sm text-justify">
+          My nickname comes from a college joke combining Breno + Gandalf.
+          I&apos;m a lifelong learner, my journey in coding began at the age of
+          11 and continues passionately to this day.
         </p>
         <Spacer y={4} />
         <div className="flex justify-center">

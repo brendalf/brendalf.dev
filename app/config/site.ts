@@ -17,7 +17,6 @@ export const siteConfig: SiteConfig = {
     },
   ],
   home: {
-    work: "Hello! I'm Breno, a Software Engineer specialized in Web Development and Machine Learning. Currently residing in Utrecht, the Netherlands, my roots are in Alegre, Brazil. I'm proud to have launched 'InfrAÇÕES', a mobile app that garnered over 100k users. My diverse experiences also include serving as a police officer for five years. A lifelong learner, my journey in coding began at the age of 11 and continues passionately to this day.",
     bio: [
       { year: "1995", description: "Born in Alegre, ES, Brazil." },
       { year: "2006", description: "Wrote my first C++ program." },

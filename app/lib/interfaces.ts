@@ -9,7 +9,6 @@ interface BioItem {
 }
 
 interface HomeConfig {
-  work: string;
   love: string;
   bio: BioItem[];
 }
