@@ -1,7 +1,27 @@
+import { siteConfig } from "@/app/config/site";
 import posts from "@/app/data/posts";
 import { Image, Spacer } from "@nextui-org/react";
+import { Metadata } from "next";
 import { remark } from "remark";
 import html from "remark-html";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const post = await load_post(params.slug);
+
+  if (!post) {
+    return {
+      title: `${siteConfig.title} - Posts`,
+    };
+  }
+
+  return {
+    title: `${post.title} - ${siteConfig.title} Posts`,
+  };
+}
 
 export default async function ViewPost({
   params,
@@ -11,7 +31,7 @@ export default async function ViewPost({
   const post = await load_post(params.slug);
 
   if (!post) {
-    return <div>Post not found</div>;
+    return <div className="mt-20 flex justify-center">Post not found</div>;
   }
 
   return (

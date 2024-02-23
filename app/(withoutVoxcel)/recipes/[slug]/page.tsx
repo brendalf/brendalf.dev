@@ -1,7 +1,27 @@
+import { siteConfig } from "@/app/config/site";
 import recipes from "@/app/data/recipes";
 import { faBlender, faPlateWheat } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Divider, Image, Spacer } from "@nextui-org/react";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const recipe = load_recipe(params.slug);
+
+  if (!recipe) {
+    return {
+      title: `${siteConfig.title} - Recipes`,
+    };
+  }
+
+  return {
+    title: `${recipe.title} - ${siteConfig.title} Recipes`,
+  };
+}
 
 export default async function ViewRecipe({
   params,
@@ -11,7 +31,7 @@ export default async function ViewRecipe({
   const recipe = load_recipe(params.slug);
 
   if (!recipe) {
-    return <div>Recipe not found</div>;
+    return <div className="mt-20 flex justify-center">Recipe not found</div>;
   }
 
   return (
