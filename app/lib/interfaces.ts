@@ -22,3 +22,10 @@ interface Post {
   thumbnail: string;
   contents: string;
 }
+
+interface Art {
+  title: string;
+  description: string;
+  thumbnail: string;
+  images: string[];
+}

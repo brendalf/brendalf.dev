@@ -66,11 +66,15 @@ export default function Home() {
         <p className="font-bold text-lg">I love</p>
         <Divider className="my-2" />
         <p className="text-gray-300 font-light text-sm">
-          Family, Coding, Sci-Fi,{" "}
+          Family, Coding, Reading,{" "}
           <Link href="/recipes" color="secondary">
             Cooking
           </Link>
-          , Music, Drawing, Games, Politics, and Machine Learning.
+          , Music,{" "}
+          <Link href="/arts" color="secondary">
+            Drawing
+          </Link>
+          , Games, and Machine Learning.
         </p>
       </div>
 

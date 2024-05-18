@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PostsLayout({
+export default function ArtsLayout({
   children,
 }: {
   children: React.ReactNode;
