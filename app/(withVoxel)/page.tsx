@@ -1,17 +1,15 @@
-import { faChevronRight, faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Avatar, Button, Divider, Link, Spacer } from "@nextui-org/react";
-import { History } from "@/app/ui/history";
 import {
   faGithub,
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { siteConfig } from "@/app/config/site";
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-xl lg:mt-8 lg:mr-10">
       {/* Profile */}
       <div className="flex flex-row pb-6">
         <Avatar
@@ -33,63 +31,46 @@ export default function Home() {
         <p className="font-bold text-lg">About me</p>
         <Divider className="my-2" />
         <p className="font-light leading-6 text-sm text-justify">
-          Hello! I&apos;m Breno, a Software Engineer seasoned in Web
-          Development, DevOps, Python, and Machine Learning Engineering.
-          Constantly trying to improve my developer skills by learning how
-          things work in the background. I use Neovim with TMUX and I like typed
-          languages like Golang and Rust.
+          I&apos;m a product oriented engineer with 10 years of experience in
+          areas like FrontEnd (Web and Mobile), Backend (APIs and Databases),
+          DevOps, and Machine Learning. I enjoy delivering value to the company,
+          getting things done, contributing to the team work happiness,
+          refactoring old codebases (when needed), defining strategic visions
+          and managing tech debt.
         </p>
         <p className="font-light leading-6 mt-2 text-sm text-justify">
-          Currently residing in the Netherlands, my roots are in Brazil. My
-          diverse experiences also include serving as a police officer for five
-          years, where I launched &quot;InfrAÇÕES&quot;, a mobile application
-          with over 100k active users that aims to make traffic law accessible
-          to everyone.
+          I&apos;m committed to ongoing development. My current side projects
+          include a programming language interpreter in Golang, Neovim plugins,
+          and a Rust application to generate statistics from git repositories.
         </p>
         <p className="font-light leading-6 mt-2 text-sm text-justify">
-          My nickname comes from a college joke combining Breno + Gandalf.
-          I&apos;m a lifelong learner, my journey in coding began at the age of
-          11 and continues passionately to this day.
+          Fun facts: (a) I worked five years as a police officer back in Brazil,
+          during which I developed InfrAÇÕES, a traffic law application with
+          over 100,000 users; (b) Brendalf comes from a college joke combining
+          Breno + Gandalf.
         </p>
         <Spacer y={4} />
         <div className="flex justify-center">
-          <Link href="/cv-breno-silva.pdf" isExternal>
-            <Button variant="ghost" color="secondary">
-              Download CV <FontAwesomeIcon icon={faDownload} />
+          <Link href="/works">
+            <Button color="secondary">
+              Portifolio <FontAwesomeIcon icon={faChevronRight} />
             </Button>
           </Link>
-          <Spacer />
-          {/* <Link href="/works"> */}
-          {/*   <Button color="secondary"> */}
-          {/*     Portifolio <FontAwesomeIcon icon={faChevronRight} /> */}
-          {/*   </Button> */}
-          {/* </Link> */}
         </div>
       </div>
 
       <Spacer y={4} />
-
-      {/* Bio */}
-      <div>
-        <p className="font-bold text-lg">Bio</p>
-        <Divider className="my-2" />
-        {siteConfig.home.bio.map((bioItem, idx) => (
-          <History
-            key={`home-bio-${idx}`}
-            year={bioItem.year}
-            desc={bioItem.description}
-          />
-        ))}
-      </div>
-
-      <Spacer y={6} />
 
       {/* I love */}
       <div>
         <p className="font-bold text-lg">I love</p>
         <Divider className="my-2" />
         <p className="text-gray-300 font-light text-sm">
-          {siteConfig.home.love}
+          Family, Coding, Sci-Fi,{" "}
+          <Link href="/recipes" color="secondary">
+            Cooking
+          </Link>
+          , Music, Drawing, Games, Politics, and Machine Learning.
         </p>
       </div>
 

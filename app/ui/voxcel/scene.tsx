@@ -17,7 +17,7 @@ export default function VoxcelScene() {
   camera.lookAt(target);
 
   return (
-    <div className="h-[200px]">
+    <div className="lg:mt-12 h-[200px] lg:w-[400px] lg:h-[400px]">
       <Canvas camera={camera}>
         <ambientLight intensity={Math.PI * 0.8} />
         <spotLight

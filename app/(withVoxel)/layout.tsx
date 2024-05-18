@@ -16,9 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <VoxelScene></VoxelScene>
+    <div className="flex flex-col-reverse lg:flex-row lg:justify-center items-center lg:items-start">
       {children}
-    </>
+      <VoxelScene></VoxelScene>
+    </div>
   );
 }
