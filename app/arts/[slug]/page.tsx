@@ -39,12 +39,18 @@ export default async function ViewArt({
       <p className="mx-auto font-thin text-gray-400">{art.description}</p>
       <Spacer y={4} />
       <div className="mx-auto max-w-7xl">
-        <Image
-          className="object-cover h-[350px] w-screen"
-          alt={art.title}
-          loading="lazy"
-          src={art.thumbnail}
-        />
+        {art.images.map((img, idx) => (
+          <>
+            <Image
+              key={`${params.slug}-${idx}`}
+              className="object-cover h-[350px]"
+              alt={img.title}
+              loading="lazy"
+              src={img.src}
+            />
+            <p className="text-center mt-2">{img.title}</p>
+          </>
+        ))}
       </div>
       <Spacer y={4} />
     </div>

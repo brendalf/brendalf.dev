@@ -23,9 +23,14 @@ interface Post {
   contents: string;
 }
 
+interface ArtImage {
+  title: string;
+  src: string;
+}
+
 interface Art {
   title: string;
   description: string;
   thumbnail: string;
-  images: string[];
+  images: ArtImage[];
 }
