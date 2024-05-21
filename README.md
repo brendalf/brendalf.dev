@@ -6,7 +6,7 @@
 
 Just a place to host my blog, share recipes and other things I love.
 
-This homepage is inspired in [Takuya's Homepage](https://www.craftz.dog).
+The homepage is inspired in [Takuya's Homepage](https://www.craftz.dog).
 
 ## Stack
 
