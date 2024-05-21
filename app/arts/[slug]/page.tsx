@@ -34,9 +34,11 @@ export default async function ViewArt({
 
   return (
     <div className="flex flex-col justify-center">
-      <h2 className="text-2xl text-center font-thin">{art.title}</h2>
+      <h2 className="text-2xl text-center font-light">{art.title}</h2>
       <Spacer y={2} />
-      <p className="mx-auto font-thin text-gray-400">{art.description}</p>
+      <p className="mx-auto font-light lg:font-thin text-gray-400">
+        {art.description}
+      </p>
       <Spacer y={4} />
       <div className="mx-auto max-w-7xl">
         {art.images.map((img, idx) => (
