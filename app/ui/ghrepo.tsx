@@ -16,7 +16,7 @@ export default function GHRepo() {
     const updateStars = async () => {
       const updatedStars = await getGHData();
       console.log(updatedStars);
-      setStars(updatedStars);
+      setStars(updatedStars["stargazers_count"]);
     };
 
     updateStars();
