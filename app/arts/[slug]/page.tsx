@@ -8,7 +8,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const art = await load_art(params.slug);
+  const art = load_art(params.slug);
 
   if (!art) {
     return {
@@ -26,7 +26,7 @@ export default async function ViewArt({
 }: {
   params: { slug: string };
 }) {
-  const art = await load_art(params.slug);
+  const art = load_art(params.slug);
 
   if (!art) {
     return <div className="mt-20 flex justify-center">art not found</div>;
@@ -57,7 +57,7 @@ export default async function ViewArt({
   );
 }
 
-async function load_art(slug: string) {
+function load_art(slug: string): Art {
   const art = arts[slug];
 
   return art;
