@@ -5,6 +5,7 @@ import Head from "next/head";
 import posts from "@/app/data/posts";
 import remarkGfm from "remark-gfm";
 import { Image, Spacer } from "@nextui-org/react";
+import { Post } from "@/app/lib/interfaces";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const slug = params?.slug as string;

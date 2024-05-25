@@ -1,3 +1,5 @@
+import { Recipe } from "@/app/lib/interfaces";
+
 const recipes: Record<string, Recipe> = {
   "chocolate-cookies": {
     title: "Chocolate Cookies",

@@ -1,5 +1,6 @@
 import { siteConfig } from "@/app/config/site";
 import recipes from "@/app/data/recipes";
+import { Recipe } from "@/app/lib/interfaces";
 import { faBlender, faPlateWheat } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Divider, Image, Spacer } from "@nextui-org/react";

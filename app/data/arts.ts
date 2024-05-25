@@ -1,3 +1,5 @@
+import { Art } from "@/app/lib/interfaces";
+
 const arts: Record<string, Art> = {
   "mushroom-2024": {
     title: "Mushroom Challenge 2024",

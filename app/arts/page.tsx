@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 };
 
-export default function Arts() {
+export default function Page() {
   return (
     <div>
       <SectionTitle title="Arts" icon={faPencilRuler} />

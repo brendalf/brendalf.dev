@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 };
 
-export default function Posts() {
+export default function Page() {
   return (
     <div>
       <SectionTitle title="Posts" icon={faBook} />

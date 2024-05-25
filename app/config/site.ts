@@ -1,3 +1,5 @@
+import { SiteConfig } from "@/app/lib/interfaces";
+
 export const siteConfig: SiteConfig = {
   title: "brendalf",
   description: "portifolio, blog, recipes, and art",

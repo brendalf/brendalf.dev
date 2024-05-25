@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PostsLayout({
+export default function Page({
   children,
 }: {
   children: React.ReactNode;

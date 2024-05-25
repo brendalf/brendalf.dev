@@ -1,23 +1,25 @@
+import { PostLabel } from "@/app/lib/enums";
+
 interface NavItem {
   title: string;
   link: string;
 }
 
-interface SiteConfig {
+export interface SiteConfig {
   title: string;
   description: string;
   github: string;
   navItems: NavItem[];
 }
 
-interface Recipe {
+export interface Recipe {
   title: string;
   thumbnail: string;
   ingredients: string[];
   process: string[];
 }
 
-interface Post {
+export interface Post {
   id: string;
   title: string;
   description: string;
@@ -30,7 +32,7 @@ interface ArtImage {
   src: string;
 }
 
-interface Art {
+export interface Art {
   title: string;
   description: string;
   thumbnail: string;

@@ -18,7 +18,7 @@ const VoxelScene = dynamic(() => import("@/app/ui/voxcel/scene"), {
   ),
 });
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="flex flex-col-reverse lg:flex-row lg:justify-center items-center lg:items-start">
       <div className="max-w-xl lg:mt-8 lg:mr-14 xl:mr-[100px]">

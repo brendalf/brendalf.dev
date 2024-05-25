@@ -1,4 +1,5 @@
-import { PostLabel } from "@/app/lib/enum";
+import { PostLabel } from "@/app/lib/enums";
+import { Post } from "@/app/lib/interfaces";
 
 const posts: Post[] = [
   {

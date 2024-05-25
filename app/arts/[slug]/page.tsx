@@ -1,5 +1,6 @@
 import { siteConfig } from "@/app/config/site";
 import arts from "@/app/data/arts";
+import { Art } from "@/app/lib/interfaces";
 import { Image, Spacer } from "@nextui-org/react";
 import { Metadata } from "next";
 
