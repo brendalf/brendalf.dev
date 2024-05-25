@@ -1,13 +1,14 @@
-const posts: Record<string, Post> = {
-  "example-post": {
-    title: "Example Post",
-    thumbnail: "/cookie.jpg",
-    contents: `
-    # Hello
+import { PostLabel } from "@/app/lib/enum";
 
-    This is a example post
-    `,
+const posts: Post[] = [
+  {
+    id: "refactoring-a-application-from-python-to-golang",
+    title:
+      "Refactoring a application from python to golang with a real example",
+    description: "How ...",
+    thumbnail: "/cookie.jpg",
+    labels: [PostLabel.PYTHON, PostLabel.GOLANG],
   },
-};
+];
 
 export default posts;

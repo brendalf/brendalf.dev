@@ -45,16 +45,14 @@ export default function Home() {
           <p className="font-light leading-6 text-sm text-justify">
             I&apos;m a product oriented engineer with 10 years of experience in
             areas like FrontEnd (Web and Mobile), Backend (APIs and Databases),
-            DevOps, and Machine Learning. I enjoy delivering value to the
-            company, getting things done, contributing to the team work
-            happiness, refactoring old codebases (when needed), defining
-            strategic visions and managing tech debt.
+            DevOps, and Machine Learning. I enjoy delivering value, getting
+            things done, and refactoring old codebases (when needed).
           </p>
           <p className="font-light leading-6 mt-2 text-sm text-justify">
-            I&apos;m committed to ongoing development. My current side projects
-            include a programming language interpreter in Golang, Neovim
-            plugins, and a Rust application to generate statistics from git
-            repositories.
+            I&apos;m a lifelong learner. I love open source and developer UX. My
+            current side projects include a programming language interpreter in
+            Golang, Neovim plugins to boost my productivity, and a Rust
+            application to generate statistics from git repositories.
           </p>
           <p className="font-light leading-6 mt-2 text-sm text-justify">
             Fun facts: (a) I worked five years as a police officer back in

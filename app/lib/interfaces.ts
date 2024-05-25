@@ -18,9 +18,11 @@ interface Recipe {
 }
 
 interface Post {
+  id: string;
   title: string;
+  description: string;
   thumbnail: string;
-  contents: string;
+  labels: PostLabel[];
 }
 
 interface ArtImage {

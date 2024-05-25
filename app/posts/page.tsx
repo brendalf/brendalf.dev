@@ -17,13 +17,12 @@ export default function Posts() {
       <SectionTitle title="Posts" icon={faBook} />
       <Spacer y={4} />
       <div className="flex justify-between flex-wrap">
-        {Object.keys(posts).map((id, idx) => {
-          const post = posts[id];
+        {posts.map((post) => {
           return (
             <Grid
-              key={`post-${idx}`}
+              key={`post-${post.id}`}
               title={post.title}
-              href={`/posts/${id}`}
+              href={`/posts/${post.id}`}
               thumbnail={post.thumbnail}
             />
           );

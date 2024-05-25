@@ -1,66 +1,55 @@
-import { siteConfig } from "@/app/config/site";
+import fs from "fs";
+import path from "path";
+import Markdown from "react-markdown";
+import Head from "next/head";
 import posts from "@/app/data/posts";
+import remarkGfm from "remark-gfm";
 import { Image, Spacer } from "@nextui-org/react";
-import { Metadata } from "next";
-import { remark } from "remark";
-import html from "remark-html";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const post = await load_post(params.slug);
+export default function Page({ params }: { params: { slug: string } }) {
+  const slug = params?.slug as string;
+
+  const post = load_post(slug);
 
   if (!post) {
-    return {
-      title: `${siteConfig.title} - Posts`,
-    };
+    return <div>Not found</div>;
   }
 
-  return {
-    title: `${post.title} - ${siteConfig.title} Posts`,
-  };
-}
-
-export default async function ViewPost({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const post = await load_post(params.slug);
-
-  if (!post) {
-    return <div className="mt-20 flex justify-center">Post not found</div>;
-  }
+  const markdownDirectory = path.join(process.cwd(), "public", "posts");
+  const filePath = path.join(markdownDirectory, `${slug}.md`);
+  const fileContents = fs.readFileSync(filePath, "utf8");
 
   return (
-    <div className="flex flex-col justify-center">
-      <h2 className="text-2xl text-center font-thin">{post.title}</h2>
-      <Spacer y={4} />
-      <div className="mx-auto max-w-7xl">
-        <Image
-          className="object-cover h-[350px] w-screen"
-          alt={post.title}
-          loading="lazy"
-          src={post.thumbnail}
-        />
+    <>
+      <Head>
+        <title>{post.title}</title>
+        <meta name="description" content={post.description} />
+      </Head>
+      <div className="flex flex-col justify-center">
+        <h2 className="text-2xl text-center font-thin">{post.title}</h2>
+        <Spacer y={4} />
+        <div className="mx-auto max-w-7xl">
+          <Image
+            className="object-cover h-[350px] w-screen"
+            alt={post.title}
+            loading="lazy"
+            src={post.thumbnail}
+          />
+        </div>
+        <Spacer y={4} />
+        <Markdown remarkPlugins={[remarkGfm]}>{fileContents}</Markdown>
       </div>
-      <Spacer y={4} />
-      <div dangerouslySetInnerHTML={{ __html: post.contents }} />
-    </div>
+    </>
   );
 }
 
-async function load_post(slug: string) {
-  const post = posts[slug];
+const load_post = (slug: string): Post | null => {
+  const post = posts.find((post) => post.id == slug);
+  return post || null;
+};
 
-  const processedContent = await remark().use(html).process(post.contents);
-  const contentHtml = processedContent.toString();
-
-  return {
-    title: slug,
-    thumbnail: post.thumbnail,
-    contents: contentHtml,
-  };
+export async function generateStaticParams() {
+  return posts.map((post) => ({
+    slug: post.id,
+  }));
 }

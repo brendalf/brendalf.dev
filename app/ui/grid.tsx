@@ -18,8 +18,8 @@ export const Grid = (props: GridProps) => (
         loading="lazy"
         src={props.thumbnail}
       />
-      <div className="mt-2">{props.title}</div>
-      <div>{props.children}</div>
+      <div className="mt-4 text-lg font-light">{props.title}</div>
+      <div className="mt-2">{props.children}</div>
     </Link>
   </div>
 );
