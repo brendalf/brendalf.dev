@@ -6,29 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Divider, Image, Spacer } from "@nextui-org/react";
 import { Metadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const recipe = load_recipe(params.slug);
-
-  if (!recipe) {
-    return {
-      title: `${siteConfig.title} - Recipes`,
-    };
-  }
-
-  return {
-    title: `${recipe.title} - ${siteConfig.title} Recipes`,
-  };
-}
-
-export default async function ViewRecipe({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const recipe = load_recipe(params.slug);
 
   if (!recipe) {
@@ -81,6 +59,37 @@ export default async function ViewRecipe({
   );
 }
 
-function load_recipe(slug: string): Recipe {
-  return recipes[slug];
+const load_recipe = (slug: string): Recipe | null => {
+  const recipe = recipes.find((recipe) => recipe.id == slug);
+  return recipe || null;
+};
+
+export async function generateStaticParams() {
+  return recipes.map((recipe) => ({
+    slug: recipe.id,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const recipe = load_recipe(params.slug);
+
+  if (!recipe) {
+    return {};
+  }
+
+  const title = `${recipe.title} - ${siteConfig.title}'s Recipes`;
+  const description = `How to make ${recipe.title.toLowerCase()}`;
+
+  return {
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+    },
+  };
 }

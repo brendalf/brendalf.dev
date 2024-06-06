@@ -1,7 +1,15 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import dynamic from "next/dynamic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Avatar, Button, Divider, Link, Spacer } from "@nextui-org/react";
+import {
+  Avatar,
+  Button,
+  Checkbox,
+  CheckboxGroup,
+  Divider,
+  Link,
+  Spacer,
+} from "@nextui-org/react";
 import {
   faGithub,
   faInstagram,
@@ -62,11 +70,13 @@ export default function Page() {
           </p>
           <Spacer y={4} />
           <div className="flex justify-center">
-            <Link href="/works">
-              <Button color="secondary">
-                Portifolio <FontAwesomeIcon icon={faChevronRight} />
-              </Button>
-            </Link>
+            <Button href="/works" as={Link} variant="flat" color="secondary">
+              Portifolio <FontAwesomeIcon icon={faChevronRight} />
+            </Button>
+            <Spacer x={2} />
+            <Button href="/goals" as={Link} variant="flat" color="secondary">
+              Yearly Goals <FontAwesomeIcon icon={faChevronRight} />
+            </Button>
           </div>
         </div>
 
@@ -77,7 +87,7 @@ export default function Page() {
           <p className="font-bold text-lg">I love</p>
           <Divider className="my-2" />
           <p className="text-gray-300 font-light text-sm">
-            Family, Coding, Reading,{" "}
+            Flamengo, Coding, Reading,{" "}
             <Link href="/recipes" color="secondary">
               Cooking
             </Link>
@@ -85,7 +95,15 @@ export default function Page() {
             <Link href="/arts" color="secondary">
               Drawing
             </Link>
-            , Games, and Machine Learning.
+            , Games, and{" "}
+            <Link
+              href="https://www.strava.com/athletes/50714620"
+              target="_blank"
+              color="secondary"
+            >
+              Running
+            </Link>
+            .
           </p>
         </div>
 

@@ -3,10 +3,9 @@ import { Post } from "@/app/lib/interfaces";
 
 const posts: Post[] = [
   {
-    id: "refactoring-a-application-from-python-to-golang",
-    title:
-      "Refactoring a application from python to golang with a real example",
-    description: "How ...",
+    id: "example-post",
+    title: "Example post",
+    description: "Blog is currently a working in progress",
     thumbnail: "/cookie.jpg",
     labels: [PostLabel.PYTHON, PostLabel.GOLANG],
   },

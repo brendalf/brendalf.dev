@@ -14,6 +14,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: siteConfig.title,
   description: siteConfig.description,
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

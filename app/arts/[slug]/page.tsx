@@ -4,30 +4,10 @@ import { Art } from "@/app/lib/interfaces";
 import { Image, Spacer } from "@nextui-org/react";
 import { Metadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const art = load_art(params.slug);
+export default async function Page({ params }: { params: { slug: string } }) {
+  const slug = params?.slug as string;
 
-  if (!art) {
-    return {
-      title: `${siteConfig.title} - Arts`,
-    };
-  }
-
-  return {
-    title: `${art.title} - ${siteConfig.title} Arts`,
-  };
-}
-
-export default async function ViewArt({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const art = load_art(params.slug);
+  const art = load_art(slug);
 
   if (!art) {
     return <div className="mt-20 flex justify-center">art not found</div>;
@@ -60,8 +40,36 @@ export default async function ViewArt({
   );
 }
 
-function load_art(slug: string): Art {
-  const art = arts[slug];
+const load_art = (slug: string): Art | null => {
+  const art = arts.find((art) => art.id == slug);
+  return art || null;
+};
 
-  return art;
+export async function generateStaticParams() {
+  return arts.map((art) => ({
+    slug: art.id,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const art = load_art(params.slug);
+
+  if (!art) {
+    return {};
+  }
+
+  const title = `${art.title} - ${siteConfig.title}'s Arts`;
+
+  return {
+    title: title,
+    description: art.description,
+    openGraph: {
+      title: title,
+      description: art.description,
+    },
+  };
 }

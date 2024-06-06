@@ -1,7 +1,8 @@
 import { Recipe } from "@/app/lib/interfaces";
 
-const recipes: Record<string, Recipe> = {
-  "chocolate-cookies": {
+const recipes: Recipe[] = [
+  {
+    id: "chocolate-cookies",
     title: "Chocolate Cookies",
     thumbnail: "/cookie.jpg",
     ingredients: [
@@ -28,7 +29,8 @@ const recipes: Record<string, Recipe> = {
       "Let cool before eating.",
     ],
   },
-  "carrot-cake-with-chocolate": {
+  {
+    id: "carrot-cake-with-chocolate",
     title: "Carrot Cake with Chocolate",
     thumbnail: "/carrot-cake.jpg",
     ingredients: [
@@ -53,6 +55,6 @@ const recipes: Record<string, Recipe> = {
       "Let cool before eating.",
     ],
   },
-};
+];
 
 export default recipes;

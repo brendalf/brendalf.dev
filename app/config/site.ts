@@ -10,8 +10,8 @@ export const siteConfig: SiteConfig = {
       link: "/works",
     },
     {
-      title: "Posts",
-      link: "/posts",
+      title: "Blog",
+      link: "/blog",
     },
     {
       title: "Recipes",
@@ -20,6 +20,10 @@ export const siteConfig: SiteConfig = {
     {
       title: "Arts",
       link: "/arts",
+    },
+    {
+      title: "Goals",
+      link: "/goals",
     },
   ],
 };

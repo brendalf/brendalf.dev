@@ -13,6 +13,7 @@ export interface SiteConfig {
 }
 
 export interface Recipe {
+  id: string;
   title: string;
   thumbnail: string;
   ingredients: string[];
@@ -33,6 +34,7 @@ interface ArtImage {
 }
 
 export interface Art {
+  id: string;
   title: string;
   description: string;
   thumbnail: string;
