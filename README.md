@@ -1,16 +1,13 @@
-# Personal Homepage
-
-> This is a working in progress...
+# brendalf.dev - Personal website
 
 [https://brendalf.dev/](https://brendalf.dev/)
 
-Just a place to host my blog, share recipes and other things I love.
+A place to share my works, blog, recipes and other things I love.
 
-The homepage is inspired in [Takuya's Homepage](https://www.craftz.dog).
+The 3D model on the initial page is inspired in [Takuya's Homepage](https://www.craftz.dog).
+
+> There are five Easter eggs on it. Can you spot all of them?
 
 ## Stack
 
-- [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
-- [Next UI](https://nextui.org/) - A simple, modular and accessible component library for React.
-- [Three.js](https://threejs.org/) - 3D library for JavaScript.
-- [Framer Motion](https://www.framer.com/motion/) - An animation library for React.
+Build with [Next.js](https://nextjs.org/), [Next UI](https://nextui.org/) and [Three.js](https://threejs.org/).
