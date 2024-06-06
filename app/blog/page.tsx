@@ -17,20 +17,23 @@ export default function Page() {
         {posts.map((post) => {
           return (
             <Link
-              color="foreground"
-              className="py-4 px-8"
               isBlock
               key={`post-${post.id}`}
-              href={`/blog/${post.id}`}
+              href={post.isExternal ? post.link : `/blog/${post.id}`}
+              color="foreground"
+              className="py-4 px-8 justify-between"
+              isExternal={post.isExternal}
+              showAnchorIcon={post.isExternal}
             >
               <div>
+                <p className="mb-2 text-sm text-gray-500">{post.date}</p>
                 {post.title}
                 <p className="mt-2 text-sm text-gray-500">{post.description}</p>
                 <div className="mt-2">
                   {post.labels.map((item, idx) => (
                     <Chip
                       color="primary"
-                      className="text-sm mr-2"
+                      className="text-xs mr-1"
                       variant="flat"
                       key={`${post.id}-${idx}`}
                     >

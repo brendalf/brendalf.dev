@@ -23,9 +23,12 @@ export interface Recipe {
 export interface Post {
   id: string;
   title: string;
+  date: string;
   description: string;
-  thumbnail: string;
+  thumbnail?: string;
   labels: PostLabel[];
+  isExternal: boolean;
+  link?: string;
 }
 
 interface ArtImage {

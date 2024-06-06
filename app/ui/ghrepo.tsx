@@ -23,7 +23,7 @@ export default function GHRepo() {
   }, []);
 
   return (
-    <Link href={siteConfig.github} target="_blank" color="foreground">
+    <Link href={siteConfig.github} isExternal color="foreground">
       <Tooltip content="View Source">
         <FontAwesomeIcon icon={faGithub} />
       </Tooltip>

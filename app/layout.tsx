@@ -28,7 +28,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Nav></Nav>
           <main className="mx-auto pt-4 px-6 flex-grow">{children}</main>
           <footer className="text-gray-400 font-light text-center sm:font-thin text-sm my-8">
-            © 2023 Breno Silva. All Rights Reserved.
+            © 2024 Breno Silva. All Rights Reserved.
           </footer>
         </Providers>
       </body>

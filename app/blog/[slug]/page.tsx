@@ -47,9 +47,11 @@ const load_post = (slug: string): Post | null => {
 };
 
 export async function generateStaticParams() {
-  return posts.map((post) => ({
-    slug: post.id,
-  }));
+  return posts
+    .filter((post) => !post.isExternal)
+    .map((post) => ({
+      slug: post.id,
+    }));
 }
 
 export async function generateMetadata({

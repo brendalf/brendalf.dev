@@ -25,7 +25,7 @@ export default function Page() {
             <Link
               href="https://www.bol.com/nl/nl/f/the-gentle-potty-training-book/9200000074700299/"
               color="secondary"
-              target="_blank"
+              isExternal
             >
               The Gentle Potty Training Book
             </Link>
@@ -35,7 +35,7 @@ export default function Page() {
             <Link
               href="https://interpreterbook.com/"
               color="secondary"
-              target="_blank"
+              isExternal
             >
               Writing An Interpreter In Go
             </Link>

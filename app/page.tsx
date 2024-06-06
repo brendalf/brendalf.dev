@@ -98,7 +98,7 @@ export default function Page() {
             , Games, and{" "}
             <Link
               href="https://www.strava.com/athletes/50714620"
-              target="_blank"
+              isExternal
               color="secondary"
             >
               Running
@@ -117,7 +117,7 @@ export default function Page() {
             <Link
               href="https://github.com/brendalf"
               color="secondary"
-              target="_blank"
+              isExternal
             >
               <div className="flex flex-row">
                 <p>
@@ -131,7 +131,7 @@ export default function Page() {
             <Link
               href="https://instagram.com/obrendalf"
               color="secondary"
-              target="_blank"
+              isExternal
             >
               <div className="flex flex-row">
                 <p>
@@ -145,7 +145,7 @@ export default function Page() {
             <Link
               href="https://linkedin.com/in/obrendalf"
               color="secondary"
-              target="_blank"
+              isExternal
             >
               <div className="flex flex-row">
                 <p>
