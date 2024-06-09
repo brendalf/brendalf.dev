@@ -20,6 +20,7 @@ export default function Page() {
               key={`rec-${recipe.id}`}
               title={recipe.title}
               href={`/recipes/${recipe.id}`}
+              isZoomed
               thumbnail={recipe.thumbnail}
             />
           );

@@ -20,6 +20,7 @@ export default function Page() {
             <Grid
               key={`work-${work.id}`}
               title={work.title}
+              isZoomed
               href={`works/${work.id}`}
               thumbnail={work.thumbnail}
             >
