@@ -23,7 +23,10 @@ export default function Page() {
               title={art.title}
               href={`/arts/${art.id}`}
               thumbnail={art.thumbnail}
-            />
+              isZoomed={false}
+            >
+              <p className="text-sm text-gray-500">{art.description}</p>
+            </Grid>
           );
         })}
       </div>
