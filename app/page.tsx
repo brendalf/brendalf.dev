@@ -1,15 +1,7 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import dynamic from "next/dynamic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  Avatar,
-  Button,
-  Checkbox,
-  CheckboxGroup,
-  Divider,
-  Link,
-  Spacer,
-} from "@nextui-org/react";
+import { Avatar, Button, Divider, Link, Spacer } from "@nextui-org/react";
 import {
   faGithub,
   faInstagram,

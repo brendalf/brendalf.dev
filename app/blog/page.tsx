@@ -19,7 +19,7 @@ export default function Page() {
             <Link
               isBlock
               key={`post-${post.id}`}
-              href={post.isExternal ? post.link : `/blog/${post.id}`}
+              href={post.externalUrl || `/blog/${post.id}`}
               color="foreground"
               className="py-4 px-8 justify-between"
               isExternal={post.isExternal}

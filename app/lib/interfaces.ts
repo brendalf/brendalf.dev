@@ -1,4 +1,4 @@
-import { PostLabel } from "@/app/lib/enums";
+import { Label } from "@/app/lib/enums";
 
 interface NavItem {
   title: string;
@@ -26,9 +26,18 @@ export interface Post {
   date: string;
   description: string;
   thumbnail?: string;
-  labels: PostLabel[];
+  labels: Label[];
   isExternal: boolean;
-  link?: string;
+  externalUrl?: string;
+}
+
+export interface Work {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  ghRepo?: string;
+  labels: Label[];
 }
 
 interface ArtImage {
