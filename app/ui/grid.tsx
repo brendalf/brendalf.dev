@@ -7,11 +7,17 @@ interface GridProps {
   title: string;
   thumbnail: string;
   isZoomed: boolean;
+  isExternal: boolean;
 }
 
 export const Grid = (params: GridProps) => (
   <div className="text-center pb-4 w-full sm:w-1/2">
-    <Link className="flex flex-col m-2" href={params.href} color="foreground">
+    <Link
+      className="flex flex-col m-2"
+      href={params.href}
+      color="foreground"
+      target={params.isExternal ? "_blank" : "_self"}
+    >
       <Image
         className="object-cover h-[300px] sm:h-[200px] w-screen"
         isZoomed={params.isZoomed}

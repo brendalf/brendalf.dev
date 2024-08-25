@@ -45,9 +45,9 @@ const load_work = (slug: string): Work | null => {
 };
 
 export async function generateStaticParams() {
-  return works.map((work) => ({
-    slug: work.id,
-  }));
+  return works
+    .filter((work) => work.ghRepo == null)
+    .map((work) => ({ slug: work.id }));
 }
 
 export async function generateMetadata({

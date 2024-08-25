@@ -24,6 +24,7 @@ export default function Page() {
               href={`/arts/${art.id}`}
               thumbnail={art.thumbnail}
               isZoomed={false}
+              isExternal={false}
             >
               <p className="text-sm text-gray-500">{art.description}</p>
             </Grid>

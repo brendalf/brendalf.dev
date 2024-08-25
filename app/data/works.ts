@@ -7,7 +7,7 @@ const works: Work[] = [
     title: "Mix.nvim",
     description: "A Elixir Mix wrapper for Neovim",
     labels: [Label.OPENSOURCE, Label.NEOVIM, Label.ELIXIR],
-    ghRepo: "brendalf/mix.nvim",
+    ghRepo: "https://github.com/brendalf/mix.nvim",
     thumbnail: "mix-nvim.png",
   },
 ];

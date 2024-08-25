@@ -16,13 +16,16 @@ export default function Page() {
       <SectionTitle title="Works" />
       <div className="flex flex-col">
         {works.map((work) => {
+          let link = work.ghRepo ? work.ghRepo : `works/${work.id}`;
+
           return (
             <Grid
               key={`work-${work.id}`}
               title={work.title}
               isZoomed
-              href={`works/${work.id}`}
+              href={link}
               thumbnail={work.thumbnail}
+              isExternal={work.ghRepo != null}
             >
               <p className="text-sm text-gray-500">{work.description}</p>
               <div className="mt-2">

@@ -21,6 +21,7 @@ export default function Page() {
               title={recipe.title}
               href={`/recipes/${recipe.id}`}
               isZoomed
+              isExternal={false}
               thumbnail={recipe.thumbnail}
             />
           );
