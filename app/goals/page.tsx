@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/app/config/site";
 import { CheckboxGroup, Checkbox, Link, Spacer } from "@nextui-org/react";
-import { SectionTitle } from "../ui/section_title";
+import { SectionTitle } from "@/app/ui/sectionTitle";
 
 export const metadata: Metadata = {
   title: `${siteConfig.title} - Year Goals`,
@@ -11,15 +11,20 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="mx-auto max-w-3xl">
-      <SectionTitle title="Yearly Goals" />
-      <p className="font-bold text-lg">2024</p>
+      <SectionTitle
+        title="Yearly Goals"
+        path={["Home"]}
+        subtitle="Yes, I like to make yearly goals and plan my year accordingly."
+      />
+      {/* TODO: convert years into posts. */}
+      <p className="font-bold text-xl">2024</p>
       <Spacer y={4} />
       <div className="text-gray-300 font-light text-sm">
         <CheckboxGroup
           label="Read"
           color="secondary"
           isReadOnly
-          defaultValue={["democracies", "lotr-2", "lotr-3"]}
+          defaultValue={["potty-training", "democracies", "lotr-2", "lotr-3"]}
         >
           <Checkbox value="potty-training">
             <Link
@@ -31,6 +36,7 @@ export default function Page() {
             </Link>
             <p className="text-sm text-gray-500">And train my daughter :)</p>
           </Checkbox>
+          <Checkbox value="gentle-sleep">The Gentle Sleep Book</Checkbox>
           <Checkbox value="interpreter">
             <Link
               href="https://interpreterbook.com/"
@@ -55,7 +61,6 @@ export default function Page() {
           <Checkbox value="narnia">Narnia Chronicles</Checkbox>
           <Checkbox value="foundation-1">Foundation 1</Checkbox>
           <Checkbox value="foundation-2">Foundation 2</Checkbox>
-          <Checkbox value="foundation-3">Foundation 3</Checkbox>
           <Checkbox value="democracies">How democracies die</Checkbox>
           <Checkbox value="lotr-2">Lord of the Rings: The Two Towers</Checkbox>
           <Checkbox value="lotr-3">

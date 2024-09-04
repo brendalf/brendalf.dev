@@ -63,7 +63,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = `${post.title} - ${siteConfig.title}'s Blog`;
+  const title = `${post.title} - ${siteConfig.title}'s Posts`;
 
   return {
     title: title,

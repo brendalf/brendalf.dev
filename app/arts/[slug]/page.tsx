@@ -1,6 +1,7 @@
 import { siteConfig } from "@/app/config/site";
 import arts from "@/app/data/arts";
 import { Art } from "@/app/lib/interfaces";
+import { SectionTitle } from "@/app/ui/sectionTitle";
 import { Image, Spacer } from "@nextui-org/react";
 import { Metadata } from "next";
 
@@ -14,25 +15,23 @@ export default async function Page({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="flex flex-col justify-center">
-      <h2 className="text-2xl text-center font-light">{art.title}</h2>
-      <Spacer y={2} />
-      <p className="mx-auto font-light lg:font-thin text-gray-400">
-        {art.description}
-      </p>
-      <Spacer y={4} />
-      <div className="mx-auto max-w-7xl">
+    <div className="mx-auto max-w-3xl">
+      <SectionTitle
+        title={art.title}
+        path={["Home", "Arts"]}
+        subtitle={art.description}
+      />
+      <div className="flex">
         {art.images.map((img, idx) => (
-          <>
+          <div key={`${params.slug}-${idx}`}>
             <Image
-              key={`${params.slug}-${idx}`}
               className="object-cover h-[350px]"
               alt={img.title}
               loading="lazy"
               src={img.src}
             />
             <p className="text-center mt-2">{img.title}</p>
-          </>
+          </div>
         ))}
       </div>
       <Spacer y={4} />

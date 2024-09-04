@@ -14,14 +14,16 @@ import { useState } from "react";
 import { siteConfig } from "@/app/config/site";
 import Logo from "@/app/ui/logo";
 import { usePathname } from "next/navigation";
-import GHRepo from "./ghrepo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import DarkModeButton from "./darkModeButton";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered isBlurred>
       <NavbarBrand>
         <Logo />
       </NavbarBrand>
@@ -45,7 +47,17 @@ export default function Nav() {
       {/* Toggle menu and theme switcher */}
       <NavbarContent justify="end">
         <NavbarItem>
-          <GHRepo />
+          <DarkModeButton />
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            href={siteConfig.github}
+            className="mt-1"
+            isExternal
+            color="foreground"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </Link>
         </NavbarItem>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}

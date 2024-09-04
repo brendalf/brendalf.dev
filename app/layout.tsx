@@ -6,6 +6,10 @@ import { siteConfig } from "@/app/config/site";
 import Nav from "@/app/ui/nav";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { Divider, Link } from "@nextui-org/react";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 config.autoAddCss = false;
 
@@ -27,8 +31,37 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Providers>
           <Nav></Nav>
           <main className="mx-auto pt-4 px-6 flex-grow">{children}</main>
-          <footer className="text-gray-400 font-light text-center sm:font-thin text-sm my-8">
-            © 2024 Breno Silva. All Rights Reserved.
+          <footer className="text-gray-400 mx-auto max-w-xl my-8 flex justify-between">
+            <div className="font-light text-sm sm:font-thin ">
+              Copyright © 2024 | All Rights Reserved.
+            </div>
+
+            <div className="flex text-large">
+              <Link
+                href="https://github.com/brendalf"
+                color="secondary"
+                className="mx-2 text-large"
+                isExternal
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </Link>
+              <Link
+                href="https://linkedin.com/in/obrendalf"
+                color="secondary"
+                className="mx-2 text-large"
+                isExternal
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </Link>
+              <Link
+                href="mailto:brenophp@gmail.com"
+                color="secondary"
+                className="mx-2 text-large"
+                isExternal
+              >
+                <FontAwesomeIcon icon={faEnvelope} />
+              </Link>
+            </div>
           </footer>
         </Providers>
       </body>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/app/config/site";
-import { SectionTitle } from "@/app/ui/section_title";
+import { SectionTitle } from "@/app/ui/sectionTitle";
 import { Chip } from "@nextui-org/react";
 import works from "@/app/data/works";
-import { Grid } from "../ui/grid";
+import { Grid } from "@/app/ui/grid";
 
 export const metadata: Metadata = {
   title: `${siteConfig.title}'s Works`,
@@ -13,7 +13,11 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div>
-      <SectionTitle title="Works" />
+      <SectionTitle
+        title="Works"
+        path={["Home"]}
+        subtitle="Side projects that I worked on."
+      />
       <div className="flex flex-col">
         {works.map((work) => {
           let link = work.ghRepo ? work.ghRepo : `works/${work.id}`;
@@ -31,7 +35,7 @@ export default function Page() {
               <div className="mt-2">
                 {work.labels.map((item, idx) => (
                   <Chip
-                    color="primary"
+                    color="default"
                     className="text-xs mr-1"
                     variant="flat"
                     key={`${work.id}-${idx}`}

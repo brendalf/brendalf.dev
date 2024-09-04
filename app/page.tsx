@@ -1,12 +1,7 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import dynamic from "next/dynamic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Avatar, Button, Divider, Link, Spacer } from "@nextui-org/react";
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { Button, Divider, Link, Spacer } from "@nextui-org/react";
 import { Spinner } from "@nextui-org/react";
 
 const VoxelScene = dynamic(() => import("@/app/ui/voxcel/scene"), {
@@ -22,131 +17,47 @@ export default function Page() {
   return (
     <div className="flex flex-col-reverse lg:flex-row lg:justify-center items-center lg:items-start">
       <div className="max-w-xl lg:mt-8 lg:mr-14 xl:mr-[100px]">
-        {/* Profile */}
-        <div className="flex flex-row pb-6">
-          <Avatar
-            isBordered
-            className="w-24 h-24 text-large"
-            alt="Profile Picture"
-            src="/brendalf.jpg"
-          />
-          <div className="ml-6 mt-2">
-            <h1 className="text-4xl font-bold">Breno Silva</h1>
-            <p className="font-thin mt-2">Senior Software Engineer</p>
-          </div>
-        </div>
-
         <Spacer y={6} />
 
-        {/* Work */}
         <div>
-          <p className="font-bold text-lg">About me</p>
-          <Divider className="my-2" />
-          <p className="font-light leading-6 text-sm text-justify">
-            I&apos;m a product oriented engineer with 10 years of experience in
-            areas like FrontEnd (Web and Mobile), Backend (APIs and Databases),
-            DevOps, and Machine Learning. I enjoy delivering value, getting
-            things done, and refactoring old codebases (when needed).
+          <p className="font-bold text-4xl">Welcome to my realm</p>
+          <p className="font-light leading-7 text-md mt-6">
+            Hi there, my name is Breno and I&apos;m a seasoned and product
+            oriented software engineer. Over the past 10 years I worked in
+            different roles, like Web Fullstack, Mobile, DevOps, Machine
+            Learning, and Security.
           </p>
-          <p className="font-light leading-6 mt-2 text-sm text-justify">
-            I&apos;m a lifelong learner. I love open source and developer UX. My
-            current side projects include a programming language interpreter in
-            Golang, Neovim plugins to boost my productivity, and a Rust
-            application to generate statistics from git repositories.
+          <p className="font-light leading-7 text-md mt-3">
+            I love working with legacy and ugly codebases. Yeah, I know. But
+            something about navigating that spaghethi code, trying to understand
+            why it came to be that way makes me feel like going down from USS
+            Entreprise to explore a unknown planet.
           </p>
-          <p className="font-light leading-6 mt-2 text-sm text-justify">
-            Fun facts: (a) I worked five years as a police officer back in
-            Brazil, during which I developed InfrAÇÕES, a traffic law
-            application with over 100,000 users; (b) Brendalf comes from a
-            college joke combining Breno + Gandalf.
-          </p>
-          <Spacer y={4} />
-          <div className="flex justify-center">
-            <Button href="/works" as={Link} variant="flat" color="secondary">
-              Portifolio <FontAwesomeIcon icon={faChevronRight} />
-            </Button>
-            <Spacer x={2} />
-            <Button href="/goals" as={Link} variant="flat" color="secondary">
-              Yearly Goals <FontAwesomeIcon icon={faChevronRight} />
-            </Button>
-          </div>
-        </div>
-
-        <Spacer y={4} />
-
-        {/* I love */}
-        <div>
-          <p className="font-bold text-lg">I love</p>
-          <Divider className="my-2" />
-          <p className="text-gray-300 font-light text-sm">
-            Flamengo, Coding, Reading,{" "}
+          <p className="font-light leading-7 text-md mt-3">
+            I&apos;m interested about{" "}
+            <Link href="/posts" color="secondary">
+              technology
+            </Link>
+            ,{" "}
             <Link href="/recipes" color="secondary">
-              Cooking
+              cooking
             </Link>
-            , Music,{" "}
+            ,{" "}
             <Link href="/arts" color="secondary">
-              Drawing
+              drawing
             </Link>
-            , Games, and{" "}
+            , music, football (Flamengo), calisthenics and{" "}
             <Link
               href="https://www.strava.com/athletes/50714620"
               isExternal
               color="secondary"
             >
-              Running
+              running
             </Link>
-            .
+            . Here I intend to share a bit of everything, from software that
+            I&apos;m working on, to posts about technology, goals and whatever
+            else I feel like to.
           </p>
-        </div>
-
-        <Spacer y={6} />
-
-        {/* On the web */}
-        <div>
-          <p className="font-bold text-lg">On the web</p>
-          <Divider className="my-2" />
-          <div>
-            <Link
-              href="https://github.com/brendalf"
-              color="secondary"
-              isExternal
-            >
-              <div className="flex flex-row">
-                <p>
-                  <FontAwesomeIcon icon={faGithub} />
-                </p>
-                <p className="ml-2">brendalf</p>
-              </div>
-            </Link>
-          </div>
-          <div className="mt-1">
-            <Link
-              href="https://instagram.com/obrendalf"
-              color="secondary"
-              isExternal
-            >
-              <div className="flex flex-row">
-                <p>
-                  <FontAwesomeIcon icon={faInstagram} />
-                </p>
-                <p className="ml-2">obrendalf</p>
-              </div>
-            </Link>
-          </div>
-          <div className="mt-1">
-            <Link
-              href="https://linkedin.com/in/obrendalf"
-              color="secondary"
-              isExternal
-            >
-              <div className="flex flex-row">
-                <p>
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </p>
-                <p className="ml-2">obrendalf</p>
-              </div>
-            </Link>
-          </div>
         </div>
       </div>
       <VoxelScene></VoxelScene>

@@ -23,7 +23,7 @@ const config: Config = {
       themes: {
         dark: {
           colors: {
-            // background: "#202023",
+            background: "#202023",
           },
         },
       },

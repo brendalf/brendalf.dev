@@ -1,6 +1,7 @@
 import { siteConfig } from "@/app/config/site";
 import recipes from "@/app/data/recipes";
 import { Recipe } from "@/app/lib/interfaces";
+import { SectionTitle } from "@/app/ui/sectionTitle";
 import { faBlender, faPlateWheat } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Divider, Image, Spacer } from "@nextui-org/react";
@@ -14,9 +15,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="flex flex-col justify-center">
-      <h2 className="text-2xl text-center font-thin">{recipe.title}</h2>
-      <Spacer y={4} />
+    <div className="mx-auto max-w-3xl">
+      <SectionTitle title={recipe.title} path={["Home", "Recipes"]} />
       <div className="mx-auto max-w-7xl">
         <Image
           className="object-cover h-[350px] w-screen"
