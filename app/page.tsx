@@ -1,7 +1,5 @@
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import dynamic from "next/dynamic";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Divider, Link, Spacer } from "@nextui-org/react";
+import { Link, Spacer } from "@nextui-org/react";
 import { Spinner } from "@nextui-org/react";
 
 const VoxelScene = dynamic(() => import("@/app/ui/voxcel/scene"), {
@@ -20,7 +18,7 @@ export default function Page() {
         <Spacer y={6} />
 
         <div>
-          <p className="font-bold text-4xl">Welcome to my realm</p>
+          <p className="font-bold text-4xl">Welcome!</p>
           <p className="font-light leading-7 text-md mt-6">
             Hi there, my name is Breno and I&apos;m a seasoned and product
             oriented software engineer. Over the past 10 years I worked in

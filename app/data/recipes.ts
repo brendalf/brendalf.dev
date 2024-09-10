@@ -55,6 +55,25 @@ const recipes: Recipe[] = [
       "Let cool before eating.",
     ],
   },
+  {
+    id: "dulche-de-leche-petit-gateau",
+    title: "Dulche de Leche Petit Gateau",
+    thumbnail: "/petit-gateau.png",
+    ingredients: [
+      "300g dulce de leche",
+      "1 egg",
+      "2 egg yolks",
+      "2 tablespoons of sugar (optional)",
+      "30g of flour",
+      "20g of butter",
+      "Vanilla (to your taste)",
+    ],
+    process: [
+      "Mix everything in a bowl, bake at 240 degrees Celsius in the oven.",
+      "The first time, bake one at a time until you find the necessary baking time to keep the center soft.",
+      "The ideal point is when the edges are more set than the center, and the center is still soft to the touch.",
+    ],
+  },
 ];
 
 export default recipes;
