@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Providers>
           <Nav></Nav>
           <main className="mx-auto pt-4 px-6 flex-grow">{children}</main>
-          <footer className="text-gray-400 mx-auto max-w-xl my-8 flex justify-between">
+          <footer className="text-gray-400 mx-auto px-6 max-w-xl my-8 flex justify-between">
             <div className="font-light text-sm sm:font-thin ">
               Copyright © 2024 | All Rights Reserved.
             </div>
