@@ -22,7 +22,7 @@ export default function Page() {
           return (
             <div key={`post-${post.id}`}>
               <Link
-                href={post.externalUrl || `/blog/${post.id}`}
+                href={post.externalUrl || `/posts/${post.id}`}
                 color="warning"
                 isExternal={post.isExternal}
                 showAnchorIcon={post.isExternal}
