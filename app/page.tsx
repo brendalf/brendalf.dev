@@ -26,10 +26,10 @@ export default function Page() {
             Learning, and Security.
           </p>
           <p className="font-light leading-7 text-md mt-3">
-            I love working with legacy and ugly codebases. Yeah, I know. But
-            something about navigating that spaghethi code, trying to understand
-            why it came to be that way makes me feel like going down from USS
-            Entreprise to explore a unknown planet.
+            I love working with legacy and ugly codebases. Something about
+            navigating that spaghethi code, trying to understand why it came to
+            be that way makes me feel like going down from USS Entreprise to
+            explore a unknown planet.
           </p>
           <p className="font-light leading-7 text-md mt-3">
             I&apos;m interested about{" "}

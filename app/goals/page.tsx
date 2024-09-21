@@ -14,7 +14,7 @@ export default function Page() {
       <SectionTitle
         title="Yearly Goals"
         path={["Home"]}
-        subtitle="Yes, I like to make yearly goals and plan my year accordingly."
+        subtitle="I like to make yearly goals."
       />
       {/* TODO: convert years into posts. */}
       <p className="font-bold text-xl">2024</p>

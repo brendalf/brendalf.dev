@@ -1,8 +1,6 @@
 import fs from "fs";
 import path from "path";
-import Markdown from "react-markdown";
 import works from "@/app/data/works";
-import remarkGfm from "remark-gfm";
 import { Image, Spacer } from "@nextui-org/react";
 import { Work } from "@/app/lib/interfaces";
 import { Metadata } from "next";
@@ -34,7 +32,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         />
       </div>
       <Spacer y={4} />
-      <Markdown remarkPlugins={[remarkGfm]}>{fileContents}</Markdown>
+      <div>{fileContents}</div>
     </div>
   );
 }
