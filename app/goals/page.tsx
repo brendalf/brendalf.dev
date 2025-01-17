@@ -24,7 +24,15 @@ export default function Page() {
           label="Read"
           color="secondary"
           isReadOnly
-          defaultValue={["potty-training", "democracies", "lotr-2", "lotr-3"]}
+          defaultValue={[
+            "potty-training",
+            "gentle-sleep",
+            "interpreter",
+            "economia-desejo",
+            "democracies",
+            "lotr-2",
+            "lotr-3",
+          ]}
         >
           <Checkbox value="potty-training">
             <Link
@@ -56,11 +64,10 @@ export default function Page() {
               </Link>
             </p>
           </Checkbox>
-          <Checkbox value="noise">Noise and signal</Checkbox>
+          <Checkbox value="elite-atraso">A Elite do Atraso</Checkbox>
           <Checkbox value="arch">Computer architectures</Checkbox>
-          <Checkbox value="narnia">Narnia Chronicles</Checkbox>
-          <Checkbox value="foundation-1">Foundation 1</Checkbox>
-          <Checkbox value="foundation-2">Foundation 2</Checkbox>
+          <Checkbox value="narnia">Narnia</Checkbox>
+          <Checkbox value="economia-desejo">Economia do desejo</Checkbox>
           <Checkbox value="democracies">How democracies die</Checkbox>
           <Checkbox value="lotr-2">Lord of the Rings: The Two Towers</Checkbox>
           <Checkbox value="lotr-3">
@@ -75,7 +82,7 @@ export default function Page() {
           defaultValue={[""]}
         >
           <Checkbox value="mushrooms">
-            <Link href="/arts/mushroom-2024" color="secondary">
+            <Link href="/arts/draw-mushroom" color="secondary">
               Mushroom 2024 Challenge
             </Link>
           </Checkbox>
@@ -98,23 +105,27 @@ export default function Page() {
           </Checkbox>
         </CheckboxGroup>
         <Spacer y={4} />
-        <CheckboxGroup label="Fitness" isReadOnly defaultValue={[""]}>
+        <CheckboxGroup
+          label="Fitness"
+          isReadOnly
+          defaultValue={["half-marathon"]}
+        >
           <Checkbox value="body-fat">
             Achieve 15% Body Fat
             <p className="text-sm text-gray-500">
-              Start of the year: 19.2%. Current: 17.2%.
+              Start of the year: 19.2%. Final: 17.2%.
             </p>
           </Checkbox>
           <Checkbox value="half-marathon">
             Run Half Marathon
             <p className="text-sm text-gray-500">
-              Registered for the Eindhoven Half Marathon in October.
+              Eindhoven Half Marathon in October.
             </p>
           </Checkbox>
           <Checkbox value="3km">
             Run 3km under 15 minutes
             <p className="text-sm text-gray-500">
-              Start of the year: 16:40. Current best: 15:16.
+              Start of the year: 16:40. Bst: 15:16.
             </p>
           </Checkbox>
         </CheckboxGroup>
